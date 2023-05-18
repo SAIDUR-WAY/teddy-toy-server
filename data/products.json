@@ -1,0 +1,112 @@
+[
+     {
+       "sellerName": "Amy",
+       "sellerEmail": "amy@example.com",
+       "toyName": "Teddy Bear",
+       "category": "Toys",
+       "subCategory": "Teddy Bear",
+       "price": 19.99,
+       "availableQuantity": 10,
+       "detailDescription": "This adorable teddy bear is soft and cuddly, perfect for kids of all ages.",
+       "img": "https://example.com/teddy_bear.jpg"
+     },
+     {
+       "sellerName": "Michael",
+       "sellerEmail": "michael@example.com",
+       "toyName": "Horse Plush",
+       "category": "Toys",
+       "subCategory": "Horse",
+       "price": 14.99,
+       "availableQuantity": 8,
+       "detailDescription": "This plush horse toy has realistic features and is great for horse lovers and imaginative play.",
+       "img": "https://example.com/horse_plush.jpg"
+     },
+   {
+       "sellerName": "Michael",
+       "sellerEmail": "michael@example.com",
+       "toyName": "Horse Plush",
+       "category": "Toys",
+       "subCategory": "Horse",
+       "price": 14.99,
+       "availableQuantity": 8,
+       "detailDescription": "This plush horse toy has realistic features and is great for horse lovers and imaginative play.",
+       "img": "https://example.com/horse_plush.jpg"
+     },
+     {
+       "sellerName": "Emily",
+       "sellerEmail": "emily@example.com",
+       "toyName": "Dinosaur Figure Set",
+       "category": "Toys",
+       "subCategory": "Dinosaur",
+       "price": 24.99,
+       "availableQuantity": 5,
+       "detailDescription": "This dinosaur figure set includes various dinosaur species, perfect for young paleontologists.",
+       "img": "https://example.com/dinosaur_figure_set.jpg"
+     },
+    {
+       "sellerName": "Emily",
+       "sellerEmail": "emily@example.com",
+       "toyName": "Dinosaur Figure Set",
+       "category": "Toys",
+       "subCategory": "Dinosaur",
+       "price": 24.99,
+       "availableQuantity": 5,
+       "detailDescription": "This dinosaur figure set includes various dinosaur species, perfect for young paleontologists.",
+       "img": "https://example.com/dinosaur_figure_set.jpg"
+     },
+     {
+       "sellerName": "Sarah",
+       "sellerEmail": "sarah@example.com",
+       "toyName": "Interactive Dog Toy",
+       "category": "Toys",
+       "subCategory": "Dogs",
+       "price": 12.99,
+       "availableQuantity": 15,
+       "detailDescription": "This interactive dog toy provides mental stimulation and entertainment for dogs of all sizes.",
+       "img": "https://example.com/interactive_dog_toy.jpg"
+     },
+     {
+       "sellerName": "David",
+       "sellerEmail": "david@example.com",
+       "toyName": "Catnip Toy",
+       "category": "Toys",
+       "subCategory": "Cats",
+       "price": 7.99,
+       "availableQuantity": 20,
+       "detailDescription": "This catnip toy is filled with premium catnip and is sure to entertain and delight your cat.",
+       "img": "https://example.com/catnip_toy.jpg"
+     },
+   {
+       "sellerName": "David",
+       "sellerEmail": "david@example.com",
+       "toyName": "Catnip Toy",
+       "category": "Toys",
+       "subCategory": "Cats",
+       "price": 7.99,
+       "availableQuantity": 20,
+       "detailDescription": "This catnip toy is filled with premium catnip and is sure to entertain and delight your cat.",
+       "img": "https://example.com/catnip_toy.jpg"
+     },
+     {
+       "sellerName": "Olivia",
+       "sellerEmail": "olivia@example.com",
+       "toyName": "Unicorn Plush",
+       "category": "Toys",
+       "subCategory": "Unicorn",
+       "price": 29.99,
+       "availableQuantity": 3,
+       "detailDescription": "This magical unicorn plush toy has sparkly details and is perfect for unicorn enthusiasts.",
+       "img": "https://example.com/unicorn_plush.jpg"
+     },
+     {
+       "sellerName": "Ben",
+       "sellerEmail": "ben@example.com",
+       "toyName": "Cow Farm Set",
+       "category": "Toys",
+       "subCategory": "Cows",
+       "price": 17.99,
+       "availableQuantity": 6,
+       "detailDescription": "This cow farm set includes cows, a barn, and other accessories for realistic farm play.",
+       "img": "https://example.com/cow_farm_set.jpg"
+     }
+]   
