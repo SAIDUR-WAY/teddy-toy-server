@@ -29,9 +29,21 @@ async function run() {
 
      app.get('/products', async(req, res)=>{
           
-          const cursor = dataCollection.find()
+          const cursor = dataCollection.find().limit(20)    
           const result = await cursor.toArray();
           // console.log(result)
+          res.send(result)
+     })
+     
+     app.get('/products/mytoys', async(req, res)=>{
+          let query ={}
+          if(req.query?.email){
+               query = {email: req.query?.email}
+          }
+          console.log(query)
+          const filter = dataCollection.find(query)
+          const result = await filter.toArray()
+
           res.send(result)
      })
      app.get('/products/category', async(req, res)=>{
@@ -69,6 +81,11 @@ async function run() {
           
      
      })
+     // app.delete('/products/:id', async (req, res)=>{
+     //      const id = req.params.id;
+     //      const query = {_id: new ObjectId(id)}
+     //      const result = {}
+     // })
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
