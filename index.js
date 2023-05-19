@@ -26,7 +26,7 @@ async function run() {
           // Connect the client to the server	(optional starting in v4.7)
      // await client.connect();
      const dataCollection = client.db('teddyToys').collection('toys')
-
+     //get data all by limit
      app.get('/products', async(req, res)=>{
           
           const cursor = dataCollection.find().limit(20)    
@@ -34,18 +34,18 @@ async function run() {
           // console.log(result)
           res.send(result)
      })
-     
+     //.get data my email
      app.get('/products/mytoys', async(req, res)=>{
           let query ={}
           if(req.query?.email){
                query = {email: req.query?.email}
           }
-          console.log(query)
           const filter = dataCollection.find(query)
           const result = await filter.toArray()
 
           res.send(result)
      })
+     //get data by category
      app.get('/products/category', async(req, res)=>{
 
           // const data = req.params.sub;
@@ -61,6 +61,7 @@ async function run() {
           res.send(result) 
 
      })
+     
      app.get('/products/:id', async(req, res)=>{
           const id = req.params.id
           console.log(id)
@@ -72,6 +73,7 @@ async function run() {
           console.log(result)
           res.send(result)
      })
+     // post and add data mongodb database
      app.post('/products', async(req, res)=>{
          const body = req.body;
      //     console.log(body)
@@ -81,13 +83,14 @@ async function run() {
           
      
      })
-     // app.delete('/products/:id', async (req, res)=>{
-     //      const id = req.params.id;
-     //      const query = {_id: new ObjectId(id)}
-     //      const result = {}
-     // })
+     app.delete('/products/:id', async (req, res)=>{
+          const id = req.params.id;
+          const query = {_id: new ObjectId(id)}
+          const result = await dataCollection.deleteOne(query)
+          res.send(result)
+     })
 
-    // Send a ping to confirm a successful connection
+//     Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
