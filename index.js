@@ -40,7 +40,7 @@ async function run() {
           if(req.query?.email){
                query = {email: req.query?.email}
           }
-          const filter = dataCollection.find(query)
+          const filter = dataCollection.find(query).sort({price: 1})
           const result = await filter.toArray()
 
           res.send(result)
@@ -83,6 +83,7 @@ async function run() {
           
      
      })
+     //delete one by mongodb
      app.delete('/products/:id', async (req, res)=>{
           const id = req.params.id;
           const query = {_id: new ObjectId(id)}
