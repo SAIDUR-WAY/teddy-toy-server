@@ -40,7 +40,7 @@ async function run() {
           // console.log(req.query?.subcategory)
 
           const query = {subCategory:  req.query?.subcategory }
-          console.log(query)
+          // console.log(query)
           // const query = {sellerName: }
 
           // // const query = {subCategory: toString(data)}
@@ -60,10 +60,13 @@ async function run() {
           console.log(result)
           res.send(result)
      })
-     app.get('/products/:sub', async(req, res)=>{
-         
-          // const categoryName = req.params.subCategory;
-          console.log(req.params.sub)
+     app.post('/products', async(req, res)=>{
+         const body = req.body;
+     //     console.log(body)
+         const result = await dataCollection.insertOne(body)
+         res.send(result)
+          
+          
      
      })
 
