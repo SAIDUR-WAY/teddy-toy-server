@@ -104,8 +104,8 @@ async function run() {
                const filter = {_id: new ObjectId(id)}
                const updateDoc = {
                     $set: {
-                         price: body.price,
-                         availableQuantity: body.availableQuantity,
+                         price: +body.price,
+                         availableQuantity: +body.availableQuantity,
                          detailDescription: body.detailDescription
                     }
                }
@@ -113,7 +113,7 @@ async function run() {
                const result = await dataCollection.updateOne(filter, updateDoc);
                res.send(result)
 
-               // console.log(updateDoc)
+               console.log(updateDoc)
           })
           //delete one by mongodb
           app.delete('/products/:id', async (req, res) => {
