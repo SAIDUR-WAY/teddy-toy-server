@@ -30,6 +30,16 @@ async function run() {
           // Connect the client to the server	(optional starting in v4.7)
           // await client.connect();
           const dataCollection = client.db('teddyToys').collection('toys')
+          const dataCollectionNews = client.db('teddyToys').collection('toysNews')
+
+          //toysNews collection add
+          app.get('/news', async (req, res)=>{
+               const cursor = dataCollectionNews.find();
+               const result = await cursor.toArray();
+               res.send(result)
+          })
+
+
           //get data all by limit
           app.get('/products', async (req, res) => {
 
@@ -46,7 +56,7 @@ async function run() {
                          email: req.query?.email
                     }
                }
-               console.log(query)
+               // console.log(query)
                const filter = dataCollection.find(query).sort({
                     price: 1
                })
@@ -113,7 +123,7 @@ async function run() {
                const result = await dataCollection.updateOne(filter, updateDoc);
                res.send(result)
 
-               console.log(updateDoc)
+               // console.log(updateDoc)
           })
           //delete one by mongodb
           app.delete('/products/:id', async (req, res) => {
