@@ -38,6 +38,11 @@ async function run() {
                const result = await cursor.toArray();
                res.send(result)
           })
+          app.get('/news/sponsor', async (req, res)=>{
+               const cursor = dataCollectionNews.find().project({teddyBearCompanyLogo: 1})
+               const result = await cursor.toArray()
+               res.send(result)
+          })
 
 
           //get data all by limit
